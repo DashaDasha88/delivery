@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 const RestaurantItem = ({ restaurant }) => {
     return (
         <View>
             <Image source={{ uri: restaurant.image }} style={styles.image} />
 
-            <View style={style.row}>
+            <View style={styles.row}>
                 <View>
                     <Text>{restaurant.name}</Text>
                     <Text>${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-{restaurant.maxDeliveryTime} minutes</Text>
@@ -39,5 +39,18 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         color: "grey",
+    },
+    row: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    rating: {
+        marginLeft: "auto",
+        backgroundColor: "lightgray",
+        width: 30,
+        height: 30,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 20,
     }
 })
