@@ -4,7 +4,7 @@ import DishDetailsScreen from '../screens/DishDetailsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import RestaurantDetailsScreen from '../screens/RestaurantDetailsScreen';
 import Basket from '../screens/Basket';
-import OrdersScreen from '../screens/OrderScreen';
+import OrdersScreen from '../screens/OrdersScreen';
 import OrderDetails from '../screens/OrderDetails';
 import {Foundation, FontAwesome5, MaterialIcons} from "@expo/vector-icons"
 
