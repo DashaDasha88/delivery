@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-joemamasdelivery-staging-235239-authRole",
+      "UnauthRoleArn": "arn:aws:iam::119053667550:role/amplify-joemamasdelivery-staging-235239-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::119053667550:role/amplify-joemamasdelivery-staging-235239-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-joemamasdelivery-staging-235239-deployment",
+      "UnauthRoleName": "amplify-joemamasdelivery-staging-235239-unauthRole",
+      "StackName": "amplify-joemamasdelivery-staging-235239",
+      "StackId": "arn:aws:cloudformation:us-east-2:119053667550:stack/amplify-joemamasdelivery-staging-235239/81397560-a742-11ed-b310-023ce99be9e4",
+      "AmplifyAppId": "d2iofy9a2ykgu3"
+    },
+    "categories": {
+      "auth": {
+        "JoeMamasDelivery": {}
+      }
+    }
+  }
+}
