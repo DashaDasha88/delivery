@@ -21,10 +21,14 @@ const RestaurantDetailsScreen = () => {
     const id = route.params?.id;
 
     useEffect(() => {
+        if (!id) {
+            return;
+        }
+
         DataStore.query(Restaurant, id).then(setRestaurant);
 
         DataStore.query(Dish, (dish) => dish.restaurantID("eq", id)).then(setDishes);
-    }, []);
+    }, [id]);
 
     if(!restaurant) {
         return <ActivityIndicator />;
@@ -35,7 +39,7 @@ const RestaurantDetailsScreen = () => {
 
             <FlatList 
                 ListHeaderComponent={() => <Header restaurant={restaurant} />}
-                data={restaurant.dishes}
+                data={dishes}
                 renderItem={({ item }) => <DishListItem dish={item} />}
                 keyExtractor={(item) => item.name}
             />

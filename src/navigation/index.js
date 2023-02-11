@@ -8,13 +8,16 @@ import OrdersScreen from '../screens/OrdersScreen';
 import OrderDetails from '../screens/OrderDetails';
 import ProfileScreen from '../screens/ProfileScreen';
 import {Foundation, FontAwesome5, MaterialIcons} from "@expo/vector-icons";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
+    const { dbUser } = useAuthContext();
+
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Home" component={HomeTabs} />
+            {dbUser ? (<Stack.Screen name="Home" component={HomeTabs} />) : ( <Stack.Screen name="Profile" component={ProfileScreen} />)}
         </Stack.Navigator>
     );
 };
