@@ -21,7 +21,7 @@ const RestaurantDetailsScreen = () => {
 
     const id = route.params?.id;
 
-    const { setRestaurant: setBasketRestaurant } = useBasketContext();
+    const { setRestaurant: setBasketRestaurant, basket, basketDishes } = useBasketContext();
 
     useEffect(() => {
         if (!id) {
@@ -61,6 +61,12 @@ const RestaurantDetailsScreen = () => {
                 style={styles.iconContainer}
             />
 
+            {basket && (<Pressable onPress={() => navigation.navigate("Basket")} style={styles.button}>
+                <Text style={styles.buttonText}>
+                    Open basket ({basketDishes.length})
+                </Text>
+            </Pressable>
+            )}
         </View>
     )
 }
